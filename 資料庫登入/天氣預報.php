@@ -167,13 +167,7 @@ include "../function.php";
                 console.error("Error fetching data:", error);
             }
         });
-
-        $(document).ready(function(){
-          $(".btn1").click(function(){
-             unset($_SESSION['login']);
-             header("location:login.php");
-         });
-         });
+   
     </script>
 </head>
 
@@ -208,6 +202,19 @@ include "../function.php";
             <div class="box1" id="box9"></div>
         </div>
     </div>
-</body>
+    <script> 
+          $(document).ready(function(){
+          $(".btn1").click(function(){
+            <?php 
+            include "../function.php";
 
+             unset($_COOKIE['login']);
+             header("location:login.php");
+
+             exit();
+             ?>
+         });
+         });
+    </script>
+</body>
 </html>
