@@ -28,14 +28,13 @@ if(!isset($_SESSION['login'])){
                 onclick="cl(&#39;#cover&#39;)">X</a>
             <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;">
 
-            </div>
+			</div>
         </div>
     </div>
 
     <div id="main">
         <a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
-            <div class="ti"
-                style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
+            <div class="ti" style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
             <!--標題-->
         </a>
         <div id="ms">
@@ -46,7 +45,7 @@ if(!isset($_SESSION['login'])){
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=title">
                         <div class="mainmu">
                             網站標題管理 </div>
-
+                            
                     </a>
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=ad">
                         <div class="mainmu">
@@ -85,7 +84,7 @@ if(!isset($_SESSION['login'])){
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
                     <span class="t">進站總人數 :
-                        <?=$Total->find(1)['total'];?></span>
+                    <?=$Total->find(1)['total'];?></span>
                 </div>
             </div>
             <?php

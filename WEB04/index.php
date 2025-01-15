@@ -21,12 +21,11 @@
             <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
         </div>
     </div>
-
+   
     <div id="main">
         <a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
-
-            <div class="ti"
-                style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
+            
+            <div class="ti" style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
             <!--標題-->
         </a>
         <div id="ms">
@@ -62,10 +61,10 @@
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
                     <span class="t">進站總人數 :
-                        <?=$Total->find(1)['total'];?></span>
+                    <?=$Total->find(1)['total'];?></span>
                 </div>
             </div>
-            <?php
+			<?php
 				//$do=$_GET['do']??'main';
 
 				$do=$_GET['do']??'main';
@@ -90,7 +89,7 @@
                 <?php 
                     }else{
                 ?>
-                <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"
+                    <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"
                     onclick="lo(&#39;admin.php&#39;)">返回管理</button>
                 <?php 
                     }
@@ -101,7 +100,7 @@
                         <img src="./icon/up.jpg" alt="" srcset="">
                     </div>
                     <div class='cent'>
-                        <?php 
+                    <?php 
                     $imgs=$Image->all(['sh'=>1]);
                     foreach($imgs as $idx => $img){
                         echo "<div class='im' id='ssaa{$idx}'>";
@@ -124,7 +123,7 @@
                         if (x == 1 && nowpage - 1 >= 0) {
                             nowpage--;
                         }
-                        if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
+                        if (x == 2 && (nowpage + 1)<= num * 1 - 3) {
                             nowpage++;
                         }
                         $(".im").hide()
