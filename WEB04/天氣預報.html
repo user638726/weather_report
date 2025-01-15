@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         * {
@@ -88,55 +89,64 @@
                 console.log('成功獲取內容:', response); // Log the entire response
                 // Check if the response structure is as expected
                 if (response) {
-                    let data=response;
-                    let data_length=data.cwaopendata.dataset.location.length;
-                    let time_length=data.cwaopendata.dataset.location[0].weatherElement[0].time.length;
+                    let data = response;
+                    let data_length = data.cwaopendata.dataset.location.length;
+                    let time_length = data.cwaopendata.dataset.location[0].weatherElement[0].time.length;
                     console.log(time_length);
                     //console.log(data);
-                     //console.log(data.cwaopendata.dataset.location[0].locationName);
-                     //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].parameter.parameterName);
-                     console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
-                     console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
-                     console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[1].startTime);
-                     console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[1].endTime);
-                     console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[2].startTime);
-                     console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[2].endTime);
+                    //console.log(data.cwaopendata.dataset.location[0].locationName);
+                    //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].parameter.parameterName);
+                    console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
+                    console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
+                    console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[1].startTime);
+                    console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[1].endTime);
+                    console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[2].startTime);
+                    console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[2].endTime);
                     // Iterate over the locations and display their names in the boxes
                     for (let i = 0; i < 9; i++) {
                         let locationName = data.cwaopendata.dataset.location[i].locationName;
                         // Dynamically select the boxes by id
                         $(`#box${i + 1}`).text(locationName);
-                       }
-                    
-                    for(let i=0;i<time_length;i++){
-                        let weather1=data.cwaopendata.dataset.location[0].weatherElement[0].time[i].parameter.parameterName;
-                        let weather2=data.cwaopendata.dataset.location[1].weatherElement[0].time[i].parameter.parameterName;
-                        let weather3=data.cwaopendata.dataset.location[2].weatherElement[0].time[i].parameter.parameterName;
-                        let weather4=data.cwaopendata.dataset.location[3].weatherElement[0].time[i].parameter.parameterName;
-                        let weather5=data.cwaopendata.dataset.location[4].weatherElement[0].time[i].parameter.parameterName;
-                        let weather6=data.cwaopendata.dataset.location[5].weatherElement[0].time[i].parameter.parameterName;
-                        let weather7=data.cwaopendata.dataset.location[6].weatherElement[0].time[i].parameter.parameterName;
-                        let weather8=data.cwaopendata.dataset.location[7].weatherElement[0].time[i].parameter.parameterName;
-                        let weather9=data.cwaopendata.dataset.location[8].weatherElement[0].time[i].parameter.parameterName;
+                    }
+
+                    for (let i = 0; i < time_length; i++) {
+                        let weather1 = data.cwaopendata.dataset.location[0].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather2 = data.cwaopendata.dataset.location[1].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather3 = data.cwaopendata.dataset.location[2].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather4 = data.cwaopendata.dataset.location[3].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather5 = data.cwaopendata.dataset.location[4].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather6 = data.cwaopendata.dataset.location[5].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather7 = data.cwaopendata.dataset.location[6].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather8 = data.cwaopendata.dataset.location[7].weatherElement[0].time[i].parameter
+                            .parameterName;
+                        let weather9 = data.cwaopendata.dataset.location[8].weatherElement[0].time[i].parameter
+                            .parameterName;
 
                         var el = document.getElementById("box1");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather1 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather1 + "</p>");
                         var el = document.getElementById("box2");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather2 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather2 + "</p>");
                         var el = document.getElementById("box3");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather3 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather3 + "</p>");
                         var el = document.getElementById("box4");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather4 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather4 + "</p>");
                         var el = document.getElementById("box5");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather5 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather5 + "</p>");
                         var el = document.getElementById("box6");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather6 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather6 + "</p>");
                         var el = document.getElementById("box7");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather7 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather7 + "</p>");
                         var el = document.getElementById("box8");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather8 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather8 + "</p>");
                         var el = document.getElementById("box9");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather9 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather9 + "</p>");
                     }
 
                 } else {
