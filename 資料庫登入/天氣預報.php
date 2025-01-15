@@ -78,6 +78,23 @@
                 width: 75%;
             }
         }
+        .btn-blue{
+            background-color:blue;
+            color: black;
+        }
+        .btn-yellow{
+            background-color: yellow;
+            color: black;
+        }
+        .btn-red{
+            background-color: red;
+            color:black
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <script>
         $.ajax({
@@ -151,12 +168,19 @@
 </head>
 
 <body>
+    <div class="header">
     <h1>天氣預報</h1>
+    <div>
+        <button type="button" class="btn-blue">登出</button>
+        <button type="button" class="btn-yellow">新增</button>
+        <button type="button" class="btn-red">刪除</button>
+    </div>
+    </div>
     <div class="outer-container">
         <div class="container">
-            <button><a href="./天氣預報.html">第一頁</a></button>
-            <button><a href="./天氣預報2.html">第二頁</a></button>
-            <button><a href="./天氣預報3.html">第三頁</a></button>
+            <button><a href="./天氣預報.php">第一頁</a></button>
+            <button><a href="./天氣預報2.php">第二頁</a></button>
+            <button><a href="./天氣預報3.php">第三頁</a></button>
         </div>
         <div class="container">
             <div class="box1" id="box1"></div>

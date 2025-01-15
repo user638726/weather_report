@@ -97,29 +97,41 @@
                      //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
                      //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
                     // Iterate over the locations and display their names in the boxes
-                    for (let i = 18; i < 22; i++) {
+                    for (let i = 9; i < 18; i++) {
                         let locationName = data.cwaopendata.dataset.location[i].locationName;
                         // Dynamically select the boxes by id
                         $(`#box${i}`).text(locationName);
                        }
                     
                     for(let i=0;i<time_length;i++){
-                        let weather19=data.cwaopendata.dataset.location[18].weatherElement[0].time[i].parameter.parameterName;
-                        let weather20=data.cwaopendata.dataset.location[19].weatherElement[0].time[i].parameter.parameterName;
-                        let weather21=data.cwaopendata.dataset.location[20].weatherElement[0].time[i].parameter.parameterName;
-                        let weather22=data.cwaopendata.dataset.location[21].weatherElement[0].time[i].parameter.parameterName;
-                        
-                        
-                        var el = document.getElementById("box18");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather19 + "</p>");
-                        var el = document.getElementById("box19");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather20 + "</p>");
-                        var el = document.getElementById("box20");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather21 + "</p>");
-                        var el = document.getElementById("box21");
-                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather22 + "</p>");
-                       
-                        
+                        let weather10=data.cwaopendata.dataset.location[9].weatherElement[0].time[i].parameter.parameterName;
+                        let weather11=data.cwaopendata.dataset.location[10].weatherElement[0].time[i].parameter.parameterName;
+                        let weather12=data.cwaopendata.dataset.location[11].weatherElement[0].time[i].parameter.parameterName;
+                        let weather13=data.cwaopendata.dataset.location[12].weatherElement[0].time[i].parameter.parameterName;
+                        let weather14=data.cwaopendata.dataset.location[13].weatherElement[0].time[i].parameter.parameterName;
+                        let weather15=data.cwaopendata.dataset.location[14].weatherElement[0].time[i].parameter.parameterName;
+                        let weather16=data.cwaopendata.dataset.location[15].weatherElement[0].time[i].parameter.parameterName;
+                        let weather17=data.cwaopendata.dataset.location[16].weatherElement[0].time[i].parameter.parameterName;
+                        let weather18=data.cwaopendata.dataset.location[17].weatherElement[0].time[i].parameter.parameterName;
+
+                        var el = document.getElementById("box9");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather10 + "</p>");
+                        var el = document.getElementById("box10");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather11 + "</p>");
+                        var el = document.getElementById("box11");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather12 + "</p>");
+                        var el = document.getElementById("box12");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather13 + "</p>");
+                        var el = document.getElementById("box13");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather14 + "</p>");
+                        var el = document.getElementById("box14");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather15 + "</p>");
+                        var el = document.getElementById("box15");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather16 + "</p>");
+                        var el = document.getElementById("box16");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather17 + "</p>");
+                        var el = document.getElementById("box17");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather18 + "</p>");
                     }
 
                 } else {
@@ -137,24 +149,24 @@
     <h1>天氣預報</h1>
     <div class="outer-container">
         <div class="container">
-            <button><a href="./天氣預報.html">第一頁</a></button>
-            <button><a href="./天氣預報2.html">第二頁</a></button>
-            <button><a href="./天氣預報3.html">第三頁</a></button>
+            <button><a href="./天氣預報.php">第一頁</a></button>
+            <button><a href="./天氣預報2.php">第二頁</a></button>
+            <button><a href="./天氣預報3.php">第三頁</a></button>
         </div>
         <div class="container">
-            <div class="box1" id="box18"></div>
-            <div class="box1" id="box19"></div>
-            <div class="box1" id="box20"></div>
+            <div class="box1" id="box9"></div>
+            <div class="box1" id="box10"></div>
+            <div class="box1" id="box11"></div>
         </div>
         <div class="container">
-            <div class="box1" id="box21"></div>
-            <div class="box1" id="box22"></div>
-            <div class="box1" id="box23"></div>
+            <div class="box1" id="box12"></div>
+            <div class="box1" id="box13"></div>
+            <div class="box1" id="box14"></div>
         </div>
         <div class="container">
-            <div class="box1" id="box24"></div>
-            <div class="box1" id="box25"></div>
-            <div class="box1" id="box26"></div>
+            <div class="box1" id="box15"></div>
+            <div class="box1" id="box16"></div>
+            <div class="box1" id="box17"></div>
         </div>
     </div>
 </body>
