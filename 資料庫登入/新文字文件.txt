@@ -1,0 +1,2 @@
+±ÂÅv½X CWA-624371E0-DEC9-4EBE-9A3E-596837C3FCE2
+https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/{F-C0032-001}?Authorization={CWA-624371E0-DEC9-4EBE-9A3E-596837C3FCE2}&format={JSON}
