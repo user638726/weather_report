@@ -1,3 +1,6 @@
+<?php 
+include "../function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -164,6 +167,13 @@
                 console.error("Error fetching data:", error);
             }
         });
+
+        $(document).ready(function(){
+          $(".btn1").click(function(){
+             unset($_SESSION['login']);
+             header("location:login.php");
+         });
+         });
     </script>
 </head>
 
@@ -171,9 +181,9 @@
     <div class="header">
     <h1>天氣預報</h1>
     <div>
-        <button type="button" class="btn-blue">登出</button>
-        <button type="button" class="btn-yellow">新增</button>
-        <button type="button" class="btn-red">刪除</button>
+        <button type="button" class="btn1 btn-blue">登出</button>
+        <button type="button" class="btn2 btn-yellow">新增</button>
+        <button type="button" class="btn3 btn-red">刪除</button>
     </div>
     </div>
     <div class="outer-container">
