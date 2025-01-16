@@ -246,6 +246,12 @@ session_start();
             ?>
         });
     });
+    $(document).ready(funtion() {
+                $(".btn3").on("click", function() {
+                        let delete = document.getElementById("box9")
+
+                    }
+                })
     </script>
 </body>
 
