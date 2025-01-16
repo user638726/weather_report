@@ -1,6 +1,6 @@
 <?php 
 include "../function.php";
-
+session_start();
 
 if(!isset($_POST['acc'])){
     header("location:login2.php");
@@ -23,7 +23,7 @@ $row=find('member',['acc'=>$acc,'pw'=>$pw]);
 //if($acc==$row['acc'] && $pw==$row['pw']){
 if(!empty($row)){
     
-    //$_SESSION['login']=$acc;
+    $_SESSION['login']=$acc;
     //echo "<br><a href='login2.php'>回首頁</a>";
     header("location:天氣預報.php");
 }else{
