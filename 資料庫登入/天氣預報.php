@@ -240,11 +240,6 @@ session_start();
                     console.log('載入失敗:', error); // 如果發生錯誤，顯示錯誤信息
                 }
             });
-
-
-
-
-
         });
     });
     </script>
