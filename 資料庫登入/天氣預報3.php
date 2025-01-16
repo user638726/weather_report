@@ -223,6 +223,16 @@ session_start();
             ?>
         });
     });
+    $(document).ready(function() {
+        $(".btn3").on("click", function() {
+            $(".box1").mouseover(function() {
+                console.log($(this)[0].id);
+                let id=$(this)[0].id
+                console.log("id",id);
+                $("#"+id).empty();
+            });
+        });
+    });
     </script>
 </body>
 
