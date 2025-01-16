@@ -25,7 +25,7 @@ if(!empty($row)){
     
     //$_SESSION['login']=$acc;
     //echo "<br><a href='login2.php'>回首頁</a>";
-    header("location:天氣預報.html");
+    header("location:天氣預報.php");
 }else{
     header("location:login2.php?err=1");
 

@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         * {
@@ -89,42 +88,38 @@
                 console.log('成功獲取內容:', response); // Log the entire response
                 // Check if the response structure is as expected
                 if (response) {
-                    let data = response;
-                    let data_length = data.cwaopendata.dataset.location.length;
-                    let time_length = data.cwaopendata.dataset.location[0].weatherElement[0].time.length;
+                    let data=response;
+                    let data_length=data.cwaopendata.dataset.location.length;
+                    let time_length=data.cwaopendata.dataset.location[0].weatherElement[0].time.length;
                     //console.log(data);
-                    //console.log(data.cwaopendata.dataset.location[0].locationName);
-                    //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].parameter.parameterName);
-                    //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
-                    //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
+                     //console.log(data.cwaopendata.dataset.location[0].locationName);
+                     //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].parameter.parameterName);
+                     //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
+                     //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
                     // Iterate over the locations and display their names in the boxes
                     for (let i = 18; i < 22; i++) {
                         let locationName = data.cwaopendata.dataset.location[i].locationName;
                         // Dynamically select the boxes by id
                         $(`#box${i}`).text(locationName);
-                    }
-
-                    for (let i = 0; i < time_length; i++) {
-                        let weather19 = data.cwaopendata.dataset.location[18].weatherElement[0].time[i]
-                            .parameter.parameterName;
-                        let weather20 = data.cwaopendata.dataset.location[19].weatherElement[0].time[i]
-                            .parameter.parameterName;
-                        let weather21 = data.cwaopendata.dataset.location[20].weatherElement[0].time[i]
-                            .parameter.parameterName;
-                        let weather22 = data.cwaopendata.dataset.location[21].weatherElement[0].time[i]
-                            .parameter.parameterName;
-
-
+                       }
+                    
+                    for(let i=0;i<time_length;i++){
+                        let weather19=data.cwaopendata.dataset.location[18].weatherElement[0].time[i].parameter.parameterName;
+                        let weather20=data.cwaopendata.dataset.location[19].weatherElement[0].time[i].parameter.parameterName;
+                        let weather21=data.cwaopendata.dataset.location[20].weatherElement[0].time[i].parameter.parameterName;
+                        let weather22=data.cwaopendata.dataset.location[21].weatherElement[0].time[i].parameter.parameterName;
+                        
+                        
                         var el = document.getElementById("box18");
-                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather19 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather19 + "</p>");
                         var el = document.getElementById("box19");
-                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather20 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather20 + "</p>");
                         var el = document.getElementById("box20");
-                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather21 + "</p>");
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather21 + "</p>");
                         var el = document.getElementById("box21");
-                        el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather22 + "</p>");
-
-
+                        el.insertAdjacentHTML("beforeEnd","<p>天氣:" + weather22 + "</p>");
+                       
+                        
                     }
 
                 } else {
