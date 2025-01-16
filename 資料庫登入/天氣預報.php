@@ -242,6 +242,7 @@ session_start();
             });
             <?php
             $_SESSION['login']=1;
+            
             ?>
         });
     });
