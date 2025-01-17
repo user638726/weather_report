@@ -85,7 +85,7 @@ session_start();
 
     .btn-blue {
         background-color: blue;
-        color: black;
+        color: white;
     }
 
     .btn-yellow {
