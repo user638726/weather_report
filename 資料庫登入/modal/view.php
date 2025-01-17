@@ -1,4 +1,4 @@
-<?php include_once "../api/db.php";
+<?php include_once "../db.php";
     $total=$Total->find(1);
 ?>
 <h3 class="cent">進站總人數管理</h3>

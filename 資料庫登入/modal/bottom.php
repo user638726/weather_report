@@ -1,4 +1,4 @@
-<?php include_once "../api/db.php";
+<?php include_once "../db.php";
     $bottom=$Bottom->find(1);
 ?>
 <h3 class="cent">頁尾版權管理</h3>
