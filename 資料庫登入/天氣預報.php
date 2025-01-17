@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,6 +103,17 @@ session_start();
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .number {
+        text-align: center;
+        margin: 0 auto;
+        background-color: yellow;
+    }
+
+    footer {
+        text-align: center;
+        background-color: yellow
     }
     </style>
     <script>
@@ -214,13 +226,19 @@ session_start();
                 <div class="box1" id="box8"></div>
                 <div class="box1" id="box9"></div>
             </div>
+            <div class="number">進站總人數 :
+                <?=$Total->find(1)['total'];?></div>
+            <footer>
+
+                <?=$Bottom->find(1)['bottom'];?>
+            </footer>
         </div>
-    </div>
-    <script>
-    $(document).ready(function() {
-        $(".btn1").on("click", function() {
-            $(".container2").empty()
-            <?php
+
+        <script>
+        $(document).ready(function() {
+            $(".btn1").on("click", function() {
+                $(".container2").empty()
+                <?php
              if(isset ($_SESSION['login'])){
 
              unset($_SESSION['login']);}
@@ -228,43 +246,43 @@ session_start();
                 echo "not use";
             }
              ?>
-            $.ajax({
-                type: "GET",
-                url: "./login.php",
-                success: function(response) {
-                    //console.log('成功獲取內容:', response); // 在控制台中檢查
-                    $(".container2").html(response); // 將內容插入容器
-                },
-                error: function(error) {
-                    console.log('載入失敗:', error); // 如果發生錯誤，顯示錯誤信息
-                }
-            });
-            <?php
+                $.ajax({
+                    type: "GET",
+                    url: "./login.php",
+                    success: function(response) {
+                        //console.log('成功獲取內容:', response); // 在控制台中檢查
+                        $(".container2").html(response); // 將內容插入容器
+                    },
+                    error: function(error) {
+                        console.log('載入失敗:', error); // 如果發生錯誤，顯示錯誤信息
+                    }
+                });
+                <?php
             $_SESSION['login']=1;
             
             ?>
-        });
-    });
-
-
-    $(document).ready(function() {
-        $(".btn3").on("click", function() {
-            $(".box1").mouseover(function() {
-                console.log($(this)[0].id);
-                let id = $(this)[0].id
-                console.log("id", id);
-                $("#" + id).hide();
             });
         });
-    });
 
 
-    $(document).ready(function() {
-        $(".btn2").on("click", function() {
-            location.reload();
+        $(document).ready(function() {
+            $(".btn3").on("click", function() {
+                $(".box1").mouseover(function() {
+                    console.log($(this)[0].id);
+                    let id = $(this)[0].id
+                    console.log("id", id);
+                    $("#" + id).hide();
+                });
+            });
         });
-    });
-    </script>
+
+
+        $(document).ready(function() {
+            $(".btn2").on("click", function() {
+                location.reload();
+            });
+        });
+        </script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <style>
-    *{
-        font-family:'courier new';
-    }
+* {
+    font-family: 'courier new';
+}
 </style>
 
 <?php
@@ -183,6 +183,6 @@ function dd($array){
 
 //insert("member",["acc"=>21,"pw"=>21,"email"=>"21@gmail.com","tel"=>"0933254879"]);
 //
-//update('member',['email'=>'19@gmail.com'],['acc'=>'19','pw'=>'19']);
+//u$Title=new DB('titles')
 
 ?>
