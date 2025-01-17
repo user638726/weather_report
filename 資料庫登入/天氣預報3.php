@@ -95,7 +95,8 @@ session_start();
 
     .btn-red {
         background-color: red;
-        color: black
+        color: yellow;
+        s
     }
 
     .header {
