@@ -10,7 +10,8 @@ if(!isset($_POST['acc'])){
 $acc=$_POST['acc'];
 $pw=$_POST['pw'];
 
-//$sql="select * from `member` where `acc`='$acc' && `pw`='$pw'";
+echo $acc;
+echo $pw;//$sql="select * from `member` where `acc`='$acc' && `pw`='$pw'";
 
 //$sql="select count(id) from `member` where `acc`='$acc' && `pw`='$pw'";
 //echo $sql;
@@ -21,14 +22,17 @@ $row=find('member',['acc'=>$acc,'pw'=>$pw]);
 //echo "</pre>";
 
 //if($acc==$row['acc'] && $pw==$row['pw']){
-if(!empty($row)){
+if($acc=="admin" && $pw=="1234"){
     
     $_SESSION['login']=$acc;
     //echo "<br><a href='login2.php'>回首頁</a>";
     header("location:backend.php");
+}elseif(!empty($row)){
+    $_SESSION['login']=$acc;
+    //echo "<br><a href='login2.php'>回首頁</a>";
+    header("location:天氣預報.php");
 }else{
     header("location:login2.php?err=1");
-
 }
 
 
