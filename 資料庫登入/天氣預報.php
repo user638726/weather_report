@@ -116,7 +116,6 @@ session_start();
                 let data = response;
                 let data_length = data.cwaopendata.dataset.location.length;
                 let time_length = data.cwaopendata.dataset.location[0].weatherElement[0].time.length;
-                console.log(time_length);
                 //console.log(data);
                 //console.log(data.cwaopendata.dataset.location[0].locationName);
                 //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].parameter.parameterName);
@@ -247,14 +246,22 @@ session_start();
         });
     });
 
+
     $(document).ready(function() {
         $(".btn3").on("click", function() {
             $(".box1").mouseover(function() {
                 console.log($(this)[0].id);
                 let id = $(this)[0].id
                 console.log("id", id);
-                $("#" + id).remove();
+                $("#" + id).hide();
             });
+        });
+    });
+
+
+    $(document).ready(function() {
+        $(".btn2").on("click", function() {
+            location.reload();
         });
     });
     </script>

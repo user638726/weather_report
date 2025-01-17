@@ -233,6 +233,11 @@ session_start();
             });
         });
     });
+    $(document).ready(function() {
+        $(".btn2").on("click", function() {
+            location.reload();
+        });
+    });
     </script>
 </body>
 
