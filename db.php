@@ -161,13 +161,13 @@ function to($url){
 }
 
 
-$Title=new DB('titles');
-$Ad=new DB('ads');
-$Image=new DB('images');
-$Mvim=new DB('mvims');
+$Title=new DB('title');
+$Ad=new DB('ad');
+$Image=new DB('image');
+$Mvim=new DB('mvim');
 $News=new DB('news');
 $Admin=new DB('admin');
-$Menu=new DB('menus');
+$Menu=new DB('menu');
 $Total=new DB('total');
 $Bottom=new DB('bottom');
 

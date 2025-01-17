@@ -26,7 +26,7 @@ if($acc=="admin" && $pw=="1234"){
     
     $_SESSION['login']=$acc;
     //echo "<br><a href='login2.php'>回首頁</a>";
-    header("location:backend.php");
+    header("location:admin.php");
 }elseif(!empty($row)){
     $_SESSION['login']=$acc;
     //echo "<br><a href='login2.php'>回首頁</a>";

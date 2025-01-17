@@ -1,7 +1,5 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
-header("Location: login.php");
-exit();
+include_once "base.php";
+unset($_SESSION['login']);
+to("login.php");
 ?>
