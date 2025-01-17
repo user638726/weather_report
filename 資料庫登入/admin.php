@@ -58,12 +58,12 @@
                     </tbody>
                 </table>
                 <?php
-                $do=(!empty($_GET['do']))?$_GET['do']:"admin";
+                $do=(!empty($_GET['do']))?$_GET['do']:"total";
 				$file="backend/".$do.".php";
 				if(file_exists($file)){
                     include $file;
                 }else{
-                    include "backend/admin.php";
+                    include "backend/total.php";
                  }  
 
                 ?>

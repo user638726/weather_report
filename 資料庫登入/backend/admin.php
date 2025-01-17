@@ -34,7 +34,7 @@
                 <tr>
                     <td width="200px">
                         <input type="hidden" name="table" value="<?=$table;?>">
-                        <input type="button" onclick="op('#cover','#cvr','modal/<?=$table;?>.php?table=<?=$table;?>')"
+                        <input type="button" onclick="op('#cover','#cvr','資料庫登入/modal/<?=$table;?>.php')"
                             value="新增管理者帳號">
                     </td>
                     <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
