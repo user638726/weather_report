@@ -210,7 +210,7 @@ session_start();
              ?>
             $.ajax({
                 type: "GET",
-                url: "./login.php",
+                url: "./index.php",
                 success: function(response) {
                     //console.log('成功獲取內容:', response); // 在控制台中檢查
                     $(".container2").html(response); // 將內容插入容器

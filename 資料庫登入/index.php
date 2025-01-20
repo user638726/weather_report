@@ -65,10 +65,12 @@ if(!isset($_COOKIE['login'])){
         <h2>登入</h2>
         <form action="check_part2.php" method="post">
             <input type="text" name="acc" placeholder="使用者名稱" required>
-            <div>預設帳號：admin</div>
-            <input type="password" name="pw" placeholder="密碼" required>
-            <div>預設密碼：1234</div>
-            <input type="submit" value="登入">
+            <div>管理帳號：admin</div>
+            <div>普通帳號：21
+                <input type="password" name="pw" placeholder="密碼" required>
+                <div>管理密碼：1234</div>
+                <div>普通密碼：21</div>
+                <input type="submit" value="登入">
         </form>
     </div>
 
