@@ -10,8 +10,7 @@ if(!isset($_POST['acc'])){
 $acc=$_POST['acc'];
 $pw=$_POST['pw'];
 
-echo $acc;
-echo $pw;//$sql="select * from `member` where `acc`='$acc' && `pw`='$pw'";
+//$sql="select * from `member` where `acc`='$acc' && `pw`='$pw'";
 
 //$sql="select count(id) from `member` where `acc`='$acc' && `pw`='$pw'";
 //echo $sql;
