@@ -185,7 +185,7 @@ session_start();
             <h1>天氣預報</h1>
             <div>
                 <button type="button" class="btn1 btn-blue">登出</button>
-                <button type="button" class="btn2 btn-yellow">新增</button>
+                <button type="button" class="btn2 btn-yellow">重新整理</button>
                 <button type="button" class="btn3 btn-red">刪除</button>
             </div>
         </div>
