@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,13 +97,23 @@ session_start();
     .btn-red {
         background-color: red;
         color: yellow;
-        s
+        
     }
 
     .header {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .number {
+        text-align: center;
+        margin: 0 auto;
+        background-color: yellow;
+    }
+
+    footer {
+        text-align: center;
+        background-color: yellow
     }
     </style>
     <script>
@@ -194,6 +205,11 @@ session_start();
                 <div class="box1" id="box25"></div>
                 <div class="box1" id="box26"></div>
             </div>
+            <div class="number">進站總人數 :
+                <?=$Total->find(1)['total'];?></div>
+            <footer>
+                <?=$Bottom->find(1)['bottom'];?>
+            </footer>
         </div>
     </div>
     <script>

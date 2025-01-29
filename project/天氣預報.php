@@ -130,6 +130,7 @@ include "db.php";
                 let time_length = data.cwaopendata.dataset.location[0].weatherElement[0].time.length;
                 //console.log(data);
                 //console.log(data.cwaopendata.dataset.location[0].locationName);
+                console.log(time_length);
                 //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].parameter.parameterName);
                 console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
                 console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
@@ -233,7 +234,7 @@ include "db.php";
                 <?=$Bottom->find(1)['bottom'];?>
             </footer>
         </div>
-
+    </div>
         <script>
         $(document).ready(function() {
             $(".btn1").on("click", function() {
