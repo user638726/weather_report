@@ -2,7 +2,7 @@
 session_start();
 class DB{
     private $table;
-    private $dsn="mysql:host=localhost;charset=utf8;dbname=db10";
+    private $dsn="mysql:host=localhost;charset=utf8;dbname=crud";
     private $root="root";
     private $pw="";
     private $pdo;
