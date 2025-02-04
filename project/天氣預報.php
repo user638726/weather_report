@@ -196,15 +196,10 @@ include "db.php";
 </head>
 
 <body>
-<?php 
-        $img=$Image->all(['sh'=>1]);
-        foreach($img as $key => $im)
-        {
-        ?>
-    <div class="container2"style="background-image:url(../project/upload/<?=$im['img'];?>)">
-    <?php
-         }
-         ?><div class="header">
+    
+    <div class="container2"> 
+   
+         <div class="header">
             <h1>天氣預報</h1>
             <div>
                 <button type="button" class="btn1 btn-blue">登出</button>
@@ -212,8 +207,15 @@ include "db.php";
                 <button type="button" class="btn3 btn-red">刪除</button>
             </div>
         </div>
-        <div class="outer-container">
-
+        <?php 
+        $img=$Image->all(['sh'=>1]);
+        foreach($img as $key => $im)
+        {
+        ?>
+        <div class="outer-container" style="background-image:url(../project/upload/<?=$im['img'];?>)">
+        <?php
+        }
+        ?>
             <div class="container">
                 <button><a href="./天氣預報.php">第一頁</a></button>
                 <button><a href="./天氣預報2.php">第二頁</a></button>
@@ -290,6 +292,24 @@ include "db.php";
                 location.reload();
             });
         });
+                    var nowpage = 0,
+                        num = <?=count($img);?>;
+
+                    function pp(x) {
+                        var s, t;
+                        if (x == 1 && nowpage - 1 >= 0) {
+                            nowpage--;
+                        }
+                        if (x == 2 && (nowpage + 1) <= num - 3) {
+                            nowpage++;
+                        }
+                        $(".im").hide()
+                        for (s = 0; s <= 2; s++) {
+                            t = s * 1 + nowpage * 1;
+                            $("#ssaa" + t).show()
+                        }
+                    }
+                    pp(1)
         </script>
 </body>
 
