@@ -1,39 +1,45 @@
-<?php 
+<?php
+include_once "db.php";
 
-include_once "../base.php";
 $table=$_POST['table'];
-$db=new DB($table);
+$db=ucfirst($table);
 
-foreach($_POST['id'] as $key=>$id){
-    if(!empty($_POST['del']) && in_array($id,$_POST['del'])){
-        $db->del($id);
-    }else{
-        $data=$db->find($id);
-        switch($table){
-            case "title":
-                $data['text']=$_POST['text'][$key];
+if(isset($_POST['id'])){
+    foreach($_POST['id'] as $idx => $id){
+        if(isset($_POST['del']) && in_array($id,$_POST['del'])){
+            $$db->del($id);
+        }else{
+            $row=$$db->find($id);
+            switch($table){
+                case "title":
+                     
+                    $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
+                    $row['text']=$_POST['text'][$idx];
+                    
+                    break;
+                case "admin":
+                    $row['acc']=$_POST['acc'][$idx];
+                    $row['pw']=$_POST['pw'][$idx];
+
+                    break;
+                case "menu":
+                    $row['text']=$_POST['text'][$idx];
+                    $row['href']=$_POST['href'][$idx];
+                    $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+                    break;
+                default:
                 
-                $data['sh']=($id==$_POST['sh'])?1:0;
-            break;
-            case "admin":
-                $data['acc']=$_POST['acc'][$key];
-                $data['pw']=$_POST['pw'][$key];
-                break;
-            case "menu":
-            $data['name']=$_POST['name'][$key];
-            $data['href']=$_POST['href'][$key];
-            $data['sh']=(in_array($id,$_POST['sh']))?1:0;
-            break;
-            default:
-            $data['text']=$_POST['text'][$key];
-            $data['sh']=(in_array($id,$_POST['sh']))?1:0;;
+                    $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+                    if(isset($_POST['text'])){
+                        $row['text']=$_POST['text'][$idx];
+                    }
+
+            }
+            $$db->save($row);
         }
-        
-        $db->save($data);
- 
     }
 }
 
-
 to("../admin.php?do=$table");
+
 ?>

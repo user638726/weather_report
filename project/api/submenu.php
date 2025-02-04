@@ -1,34 +1,26 @@
-<?php
-include_once "../base.php";
-$table=$_POST['table'];
-$db=new DB($table);
-$parent=$_POST['parent'];
+<?php include_once "db.php";
 
-
-if(!empty($_POST['id'])){
-    foreach($_POST['id'] as $key => $id){
-        if(!empty($_POST['del']) && in_array($id,$_POST['del'])){
-            $db->del($id);
+if(isset($_POST['id'])){
+    foreach($_POST['id'] as $idx => $id){
+        if(isset($_POST['del']) && in_array($id,$_POST['del'])){
+            $Menu->del($id);
         }else{
-            $row=$db->find($id);
-            $row['name']=$_POST['name'][$key];
-            $row['href']=$_POST['href'][$key];
-            $db->save($row);
-
+            $row=$Menu->find($id);
+            $row['text']=$_POST['text'][$idx];
+            $row['href']=$_POST['href'][$idx];
+            $Menu->save($row);
         }
     }
 }
-
-if(!empty($_POST['name2'])){
-    foreach($_POST['name2'] as $key=>$name){
-        $new=[];
-        $new['name']=$name;
-        $new['href']=$_POST['href2'][$key];
-        $new['sh']=1;
-        $new['parent']=$parent;
-        $db->save($new);
+if(isset($_POST['text2'])){
+    foreach($_POST['text2'] as $idx => $text){
+        if($text!=''){
+            $row=[];
+            $row['text']=$text;
+            $row['href']=$_POST['href2'][$idx];
+            $row['main_id']=$_POST['main_id'];
+            $Menu->save($row);
+        }
     }
 }
-
 to("../admin.php?do=menu");
-?>

@@ -83,17 +83,6 @@ if(!isset($_COOKIE['login'])){
     <?php
 }
 ?>
-    <script>
-    window.onpopstate = function(event) {
-
-    };
-    history.replaceState({
-        page: 3
-    }, "title3", "?login_php=3"); // alerts "location: http://example.com/example.html, state: null
-    history.go(
-        2
-    ); // alerts "l
-    </script>
 </body>
 
 </html>
