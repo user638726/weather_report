@@ -2,7 +2,7 @@
 
 
 class DB{
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=crud";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db10";
     protected $pdo;
     protected $table;
 
@@ -124,7 +124,7 @@ class DB{
      * 取得多筆資料
      */
     protected function fetchAll($sql){
-        //echo $sql;
+       
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
     
@@ -139,14 +139,13 @@ class DB{
             $tmp=$this->a2s($where);
             $sql=$sql . " WHERE " . join(" && ", $tmp);
         }
-
         return $this->pdo->query($sql)->fetchColumn();
     }
 
 }
 
 function q($sql){
-    $pdo=new PDO("mysql:host=localhost;charset=utf8;dbname=db10",'root','');
+    $pdo=new PDO("mysql:host=localhost;charset=utf8;dbname=db02",'root','');
     return $pdo->query($sql)->fetchAll();
 }
 
@@ -161,13 +160,13 @@ function to($url){
 }
 
 
-$Title=new DB('title');
-$Ad=new DB('ad');
-$Image=new DB('image');
-$Mvim=new DB('mvim');
+$Title=new DB('titles');
+$Ad=new DB('ads');
+$Image=new DB('images');
+$Mvim=new DB('mvims');
 $News=new DB('news');
 $Admin=new DB('admin');
-$Menu=new DB('menu');
+$Menu=new DB('menus');
 $Total=new DB('total');
 $Bottom=new DB('bottom');
 

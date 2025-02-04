@@ -3,7 +3,7 @@
 session_start();
 
 class DB{
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db02";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db10";
     protected $pdo;
     protected $table;
 
@@ -67,7 +67,7 @@ class DB{
             $sql="INSERT INTO $this->table (`".join("`,`",$cols)."`) VALUES('".join("','",$array)."')";
         }
         
-        //echo $sql;
+        echo $sql;
         return $this->pdo->exec($sql);
     }
     
@@ -140,7 +140,6 @@ class DB{
             $tmp=$this->a2s($where);
             $sql=$sql . " WHERE " . join(" && ", $tmp);
         }
-
         return $this->pdo->query($sql)->fetchColumn();
     }
 
