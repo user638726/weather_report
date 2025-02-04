@@ -49,7 +49,7 @@ class DB{
         }else{
               $sql=$sql . "where `id`='$arg'";
         }
-        
+    
           return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
       }
   
