@@ -24,7 +24,6 @@ include "db.php";
         max-width: 1000px;
         margin: 0 auto;
         max-height: 2200px;
-        background-repeat: no-repeat;
     }
 
     .container {
@@ -197,8 +196,15 @@ include "db.php";
 </head>
 
 <body>
-    <div class="container2" >
-        <div class="header">
+<?php 
+        $img=$Image->all(['sh'=>1]);
+        foreach($img as $key => $im)
+        {
+        ?>
+    <div class="container2"style="background-image:url(../project/upload/<?=$im['img'];?>)">
+    <?php
+         }
+         ?><div class="header">
             <h1>天氣預報</h1>
             <div>
                 <button type="button" class="btn1 btn-blue">登出</button>
@@ -206,15 +212,8 @@ include "db.php";
                 <button type="button" class="btn3 btn-red">刪除</button>
             </div>
         </div>
-        <?php 
-        $img=$Image->all(['sh'=>1]);
-        foreach($img as $key => $im)
-        {
-        ?>
-        <div class="outer-container" style="background-image:url(../project/upload/<?=$im['img'];?>)">
-        <?php
-         }
-         ?>
+        <div class="outer-container">
+
             <div class="container">
                 <button><a href="./天氣預報.php">第一頁</a></button>
                 <button><a href="./天氣預報2.php">第二頁</a></button>
