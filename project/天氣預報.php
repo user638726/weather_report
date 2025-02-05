@@ -116,8 +116,12 @@ include "db.php";
         background-color: yellow
     }
 
-    img {
-        z-index: -1;
+    #radar2 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     </style>
     <script>
@@ -329,6 +333,13 @@ include "db.php";
                 <div class="box1" id="box8"></div>
                 <div class="box1" id="box9"></div>
             </div>
+
+            <div id=radar2><img src="https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0058-002.png"
+                    style="width:300px;height:300px;"><img
+                    src="https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-B0028-003.jpg"
+                    style="width:300px;height:300px;"><img
+                    src="https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0040-002.jpg"
+                    style="width:300px;height:300px;"></div>
             <div class="number">進站總人數 :
                 <?=$Total->find(1)['total'];?></div>
             <footer>

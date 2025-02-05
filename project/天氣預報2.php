@@ -223,7 +223,7 @@ include "db.php";
                     }
                     if (weather16 == "多雲時陰") {
                         var box1 = document.getElementById('box16'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/06.svg')"; // 设置背景图像
+                        box1.style.backgroundImage = "url('./upload/05.svg')"; // 设置背景图像
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
@@ -315,6 +315,12 @@ include "db.php";
                 <div class="box1" id="box17"></div>
                 <div class="box1" id="box18"></div>
             </div>
+            <div id=radar2><img src="https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0058-002.png"
+                    style="width:300px;height:300px;"><img
+                    src="https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-B0028-003.jpg"
+                    style="width:300px;height:300px;"><img
+                    src="https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0040-002.jpg"
+                    style="width:300px;height:300px;"></div>
             <div class="number">進站總人數 :
                 <?=$Total->find(1)['total'];?></div>
             <footer>
