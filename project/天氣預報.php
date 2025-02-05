@@ -253,6 +253,16 @@ include "db.php";
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
                     }
+
+
+
+
+
+
+
+
+
+
                 }
             } else {
                 console.error("Data structure is unexpected", response);

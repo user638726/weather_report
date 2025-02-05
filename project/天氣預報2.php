@@ -134,10 +134,10 @@ include "db.php";
                 //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].endTime);
                 //console.log(data.cwaopendata.dataset.location[0].weatherElement[0].time[0].startTime);
                 // Iterate over the locations and display their names in the boxes
-                for (let i = 9; i < 18; i++) {
+                for (let i = 9; i < 19; i++) {
                     let locationName = data.cwaopendata.dataset.location[i].locationName;
                     // Dynamically select the boxes by id
-                    $(`#box${i}`).text(locationName);
+                    $(`#box${i+1}`).text(locationName);
                 }
 
                 for (let i = 0; i < time_length; i++) {
@@ -160,24 +160,48 @@ include "db.php";
                     let weather18 = data.cwaopendata.dataset.location[17].weatherElement[0].time[i]
                         .parameter.parameterName;
 
-                    var el = document.getElementById("box9");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather10 + "</p>");
                     var el = document.getElementById("box10");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather11 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather10 + "</p>");
                     var el = document.getElementById("box11");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather12 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather11 + "</p>");
                     var el = document.getElementById("box12");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather13 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather12 + "</p>");
                     var el = document.getElementById("box13");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather14 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather13 + "</p>");
                     var el = document.getElementById("box14");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather15 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather14 + "</p>");
                     var el = document.getElementById("box15");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather16 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather15 + "</p>");
                     var el = document.getElementById("box16");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather17 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather16 + "</p>");
                     var el = document.getElementById("box17");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather17 + "</p>");
+                    var el = document.getElementById("box18");
                     el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather18 + "</p>");
+
+                    if (weather10 == "多雲") {
+                        var box1 = document.getElementById('box10'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather11 == "多雲") {
+                        var box1 = document.getElementById('box11'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather12 == "多雲") {
+                        var box1 = document.getElementById('box12'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+
+
                 }
 
             } else {
@@ -228,19 +252,19 @@ include "db.php";
                 <div class='cent' id="up" onclick="pp(2)">
                     <img src="./icon/right.jpg" alt="" srcset="" style="padding-top: 80px;">
                 </div>
-                <div class="box1" id="box9"></div>
                 <div class="box1" id="box10"></div>
                 <div class="box1" id="box11"></div>
+                <div class="box1" id="box12"></div>
             </div>
             <div class="container">
-                <div class="box1" id="box12"></div>
                 <div class="box1" id="box13"></div>
                 <div class="box1" id="box14"></div>
+                <div class="box1" id="box15"></div>
             </div>
             <div class="container">
-                <div class="box1" id="box15"></div>
                 <div class="box1" id="box16"></div>
                 <div class="box1" id="box17"></div>
+                <div class="box1" id="box18"></div>
             </div>
             <div class="number">進站總人數 :
                 <?=$Total->find(1)['total'];?></div>

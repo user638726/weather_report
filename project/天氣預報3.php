@@ -138,7 +138,7 @@ include "db.php";
                 for (let i = 18; i < 22; i++) {
                     let locationName = data.cwaopendata.dataset.location[i].locationName;
                     // Dynamically select the boxes by id
-                    $(`#box${i}`).text(locationName);
+                    $(`#box${i+1}`).text(locationName);
                 }
 
                 for (let i = 0; i < time_length; i++) {
@@ -152,13 +152,13 @@ include "db.php";
                         .parameter.parameterName;
 
 
-                    var el = document.getElementById("box18");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather19 + "</p>");
                     var el = document.getElementById("box19");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather20 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather19 + "</p>");
                     var el = document.getElementById("box20");
-                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather21 + "</p>");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather20 + "</p>");
                     var el = document.getElementById("box21");
+                    el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather21 + "</p>");
+                    var el = document.getElementById("box22");
                     el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather22 + "</p>");
 
 
@@ -218,19 +218,19 @@ include "db.php";
                 <div class='cent' id="up" onclick="pp(2)">
                     <img src="./icon/right.jpg" alt="" srcset="" style="padding-top: 80px;">
                 </div>
-                <div class="box1" id="box18"></div>
                 <div class="box1" id="box19"></div>
                 <div class="box1" id="box20"></div>
+                <div class="box1" id="box21"></div>
             </div>
             <div class="container">
-                <div class="box1" id="box21"></div>
                 <div class="box1" id="box22"></div>
                 <div class="box1" id="box23"></div>
+                <div class="box1" id="box24"></div>
             </div>
             <div class="container">
-                <div class="box1" id="box24"></div>
                 <div class="box1" id="box25"></div>
                 <div class="box1" id="box26"></div>
+                <div class="box1" id="box27"></div>
             </div>
             <div class="number">進站總人數 :
                 <?=$Total->find(1)['total'];?></div>
