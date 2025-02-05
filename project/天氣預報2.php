@@ -297,12 +297,12 @@ include "db.php";
     });
     $(document).ready(function() {
         $(".btn3").on("click", function() {
-            $(".box1").mouseover(function() {
+            $(".box1").on("click", function() {
                 console.log($(this)[0].id);
                 let id = $(this)[0].id
                 console.log("id", id);
                 $("#" + id).remove();
-            });
+            })
         });
     });
     $(document).ready(function() {
