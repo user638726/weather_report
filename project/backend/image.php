@@ -3,12 +3,12 @@
     <!--正中央-->
     <?php include_once "logout.php";?>
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-        <p class="t cent botli">背景影像管理</p>
+        <p class="t cent botli">輪播影像管理</p>
         <form method="post" action="./api/edit.php">
             <table width="100%">
                 <tbody>
                     <tr class="yel">
-                        <td width="70%">背景影像</td>
+                        <td width="70%">輪播影像</td>
                         <td width="10%">顯示</td>
                         <td width="10%">刪除</td>
                         <td></td>
