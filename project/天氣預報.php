@@ -205,7 +205,7 @@ include "db.php";
                     }
                     if (weather3 == "多雲時陰") {
                         var box1 = document.getElementById('box3'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/06.svg')"; // 设置背景图像
+                        box1.style.backgroundImage = "url('./upload/05.svg')"; // 设置背景图像
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图

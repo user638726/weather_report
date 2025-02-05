@@ -200,6 +200,55 @@ include "db.php";
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
                     }
+                    if (weather13 == "多雲") {
+                        var box1 = document.getElementById('box13'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather14 == "多雲") {
+                        var box1 = document.getElementById('box14'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather15 == "多雲") {
+                        var box1 = document.getElementById('box15'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather16 == "多雲時陰") {
+                        var box1 = document.getElementById('box16'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/06.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather17 == "陰短暫雨") {
+                        var box1 = document.getElementById('box17'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/11.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+                    if (weather18 == "陰短暫雨") {
+                        var box1 = document.getElementById('box18'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/11.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }
+
+
+
+
+
+
+
 
 
                 }
