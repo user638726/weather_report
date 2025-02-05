@@ -24,6 +24,7 @@ include "db.php";
         max-width: 1000px;
         margin: 0 auto;
         max-height: 2200px;
+        background-color: lightblue;
     }
 
     .container {
@@ -196,10 +197,10 @@ include "db.php";
 </head>
 
 <body>
-    
-    <div class="container2"> 
-   
-         <div class="header">
+
+    <div class="container2">
+
+        <div class="header">
             <h1>天氣預報</h1>
             <div>
                 <button type="button" class="btn1 btn-blue">登出</button>
@@ -207,26 +208,39 @@ include "db.php";
                 <button type="button" class="btn3 btn-red">刪除</button>
             </div>
         </div>
-        <?php 
-        $img=$Image->all(['sh'=>1]);
-        foreach($img as $key => $im)
-        {
-        ?>
-        <div class="outer-container" style="background-image:url(../project/upload/<?=$im['img'];?>)">
-        <?php
-        }
-        ?>
+        <div class="outer-container">
+
             <div class="container">
+
                 <button><a href="./天氣預報.php">第一頁</a></button>
                 <button><a href="./天氣預報2.php">第二頁</a></button>
                 <button><a href="./天氣預報3.php">第三頁</a></button>
             </div>
             <div class="container">
+                <span class="t"></span>
+                <div class='cent' id="dn" onclick="pp(1)">
+                    <img src="./icon/left.jpg" alt="" style="padding-top: 80px;">
+                </div>
+                <?php 
+                    $imgs=$Image->all(['sh'=>1]);
+                    foreach($imgs as $idx => $img){
+                        echo "<div class='im' id='ssaa{$idx}'>";
+                        echo "<img src='./upload/{$img['img']}' style='width:250px;height:200px;border:3px solid orange'>";
+                        echo "</div>";
+                    }
+
+                        
+
+                ?>
+                <div class='cent' id="up" onclick="pp(2)">
+                    <img src="./icon/right.jpg" alt="" srcset="" style="padding-top: 80px;">
+                </div>
                 <div class="box1" id="box1"></div>
                 <div class="box1" id="box2"></div>
                 <div class="box1" id="box3"></div>
             </div>
             <div class="container">
+
                 <div class="box1" id="box4"></div>
                 <div class="box1" id="box5"></div>
                 <div class="box1" id="box6"></div>
@@ -244,11 +258,29 @@ include "db.php";
             </footer>
         </div>
     </div>
-        <script>
-        $(document).ready(function() {
-            $(".btn1").on("click", function() {
-                $(".container2").empty()
-                <?php
+    <script>
+    var nowpage = 0,
+        num = <?=$Image->count(['sh'=>1]);?>;
+
+    function pp(x) {
+        var s, t;
+        if (x == 1 && nowpage - 1 >= 0) {
+            nowpage--;
+        }
+        if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
+            nowpage++;
+        }
+        $(".im").hide()
+        for (s = 0; s <= 2; s++) {
+            t = s * 1 + nowpage * 1;
+            $("#ssaa" + t).show()
+        }
+    }
+    pp(1)
+    $(document).ready(function() {
+        $(".btn1").on("click", function() {
+            $(".container2").empty()
+            <?php
              if(isset ($_SESSION['login'])){
 
              unset($_SESSION['login']);}
@@ -256,61 +288,43 @@ include "db.php";
                 echo "not use";
             }
              ?>
-                $.ajax({
-                    type: "GET",
-                    url: "./index.php",
-                    success: function(response) {
-                        //console.log('成功獲取內容:', response); // 在控制台中檢查
-                        $(".container2").html(response); // 將內容插入容器
-                    },
-                    error: function(error) {
-                        console.log('載入失敗:', error); // 如果發生錯誤，顯示錯誤信息
-                    }
-                });
-                <?php
+            $.ajax({
+                type: "GET",
+                url: "./index.php",
+                success: function(response) {
+                    //console.log('成功獲取內容:', response); // 在控制台中檢查
+                    $(".container2").html(response); // 將內容插入容器
+                },
+                error: function(error) {
+                    console.log('載入失敗:', error); // 如果發生錯誤，顯示錯誤信息
+                }
+            });
+            <?php
             $_SESSION['login']=1;
             
             ?>
+        });
+    });
+
+
+    $(document).ready(function() {
+        $(".btn3").on("click", function() {
+            $(".box1").mouseover(function() {
+                console.log($(this)[0].id);
+                let id = $(this)[0].id
+                console.log("id", id);
+                $("#" + id).hide();
             });
         });
+    });
 
 
-        $(document).ready(function() {
-            $(".btn3").on("click", function() {
-                $(".box1").mouseover(function() {
-                    console.log($(this)[0].id);
-                    let id = $(this)[0].id
-                    console.log("id", id);
-                    $("#" + id).hide();
-                });
-            });
+    $(document).ready(function() {
+        $(".btn2").on("click", function() {
+            location.reload();
         });
-
-
-        $(document).ready(function() {
-            $(".btn2").on("click", function() {
-                location.reload();
-            });
-        });
-                    var nowpage = 0,
-                        num = <?=count($img);?>;
-
-                    function pp(x) {
-                        var s, t;
-                        if (x == 1 && nowpage - 1 >= 0) {
-                            nowpage--;
-                        }
-                        if (x == 2 && (nowpage + 1) <= num - 3) {
-                            nowpage++;
-                        }
-                        $(".im").hide()
-                        for (s = 0; s <= 2; s++) {
-                            t = s * 1 + nowpage * 1;
-                            $("#ssaa" + t).show()
-                        }
-                    }
-                    pp(1)
-        </script>
+    });
+    </script>
 </body>
 
 </html>

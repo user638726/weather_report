@@ -24,6 +24,7 @@ include "db.php";
         max-width: 1000px;
         margin: 0 auto;
         max-height: 2200px;
+        background-color: lightblue;
     }
 
     .container {
@@ -96,7 +97,7 @@ include "db.php";
     .btn-red {
         background-color: red;
         color: yellow;
-        
+
     }
 
     .header {
@@ -104,6 +105,7 @@ include "db.php";
         justify-content: center;
         align-items: center;
     }
+
     .number {
         text-align: center;
         margin: 0 auto;
@@ -189,15 +191,33 @@ include "db.php";
         {
         ?>
         <div class="outer-container" style="background-image:url(../project/upload/<?=$im['img'];?>)">
-        <?php
+            <?php
          }
-         ?>   
+         ?>
             <div class="container">
                 <button><a href="./天氣預報.php">第一頁</a></button>
                 <button><a href="./天氣預報2.php">第二頁</a></button>
                 <button><a href="./天氣預報3.php">第三頁</a></button>
             </div>
             <div class="container">
+                <span class="t"></span>
+                <div class='cent' id="dn" onclick="pp(1)">
+                    <img src="./icon/left.jpg" alt="" style="padding-top: 80px;">
+                </div>
+                <?php 
+                    $imgs=$Image->all(['sh'=>1]);
+                    foreach($imgs as $idx => $img){
+                        echo "<div class='im' id='ssaa{$idx}'>";
+                        echo "<img src='./upload/{$img['img']}' style='width:250px;height:200px;border:3px solid orange'>";
+                        echo "</div>";
+                    }
+
+                        
+
+                ?>
+                <div class='cent' id="up" onclick="pp(2)">
+                    <img src="./icon/right.jpg" alt="" srcset="" style="padding-top: 80px;">
+                </div>
                 <div class="box1" id="box18"></div>
                 <div class="box1" id="box19"></div>
                 <div class="box1" id="box20"></div>
@@ -220,6 +240,24 @@ include "db.php";
         </div>
     </div>
     <script>
+    var nowpage = 0,
+        num = <?=$Image->count(['sh'=>1]);?>;
+
+    function pp(x) {
+        var s, t;
+        if (x == 1 && nowpage - 1 >= 0) {
+            nowpage--;
+        }
+        if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
+            nowpage++;
+        }
+        $(".im").hide()
+        for (s = 0; s <= 2; s++) {
+            t = s * 1 + nowpage * 1;
+            $("#ssaa" + t).show()
+        }
+    }
+    pp(1)
     $(document).ready(function() {
         $(".btn1").on("click", function() {
             $(".container2").empty()
