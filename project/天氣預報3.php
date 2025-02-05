@@ -174,6 +174,12 @@ include "db.php";
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    }else if(weather20 == "多雲"){
+                        var box1 = document.getElementById('box20'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/04.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
                     }
                     if (weather21 == "晴時多雲") {
                         var box1 = document.getElementById('box21'); // 获取box1元素
