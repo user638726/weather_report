@@ -227,15 +227,8 @@ include "db.php";
                 <button type="button" class="btn3 btn-red">刪除</button>
             </div>
         </div>
-        <?php 
-        $img=$Image->all(['sh'=>1]);
-        foreach($img as $key => $im)
-        {
-        ?>
-        <div class="outer-container" style="background-image:url(../project/upload/<?=$im['img'];?>)">
-            <?php
-         }
-         ?>
+        <div class="outer-container">
+
             <div class="container">
                 <button><a href="./天氣預報.php">第一頁</a></button>
                 <button><a href="./天氣預報2.php">第二頁</a></button>
@@ -253,10 +246,7 @@ include "db.php";
                         echo "<img src='./upload/{$img['img']}' style='width:250px;height:200px;border:3px solid orange'>";
                         echo "</div>";
                     }
-
-                        
-
-                ?>
+               ?>
                 <div class='cent' id="up" onclick="pp(2)">
                     <img src="./icon/right.jpg" alt="" srcset="" style="padding-top: 80px;">
                 </div>
