@@ -173,44 +173,30 @@ include "db.php";
                     }
 
                     if (weather19 == "陰天") {
-                        var box1 = document.getElementById('box19'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/陰天.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                        setBackgroundImage('box19', weather19, './upload/陰天.svg');
                     }
-                    if (weather20 == "多雲時陰") {
-                        setBackgroundImage('box20', weather20, './upload/多雲時陰.svg');
+                    if (weather20 == "陰天") {
+                        setBackgroundImage('box20', weather20, './upload/陰天.svg');
                     } else if (weather20 == "陰時多雲") {
                         setBackgroundImage('box20', weather20, './upload/陰時多雲.svg');
                     } else if (weather20 == "多雲時晴") {
                         setBackgroundImage('box20', weather20, './upload/多雲時晴.svg');
+                    } else if (weather20 == "多雲") {
+                        setBackgroundImage('box20', weather20, './upload/多雲.svg');
                     }
                     if (weather21 == "晴時多雲") {
-                        var box1 = document.getElementById('box21'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/晴時多雲.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                        setBackgroundImage('box21', weather21, './upload/晴時多雲.svg');
                     } else if (weather21 == "多雲時晴") {
-                        var box1 = document.getElementById('box21'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/多雲時晴.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat";
+                        setBackgroundImage('box21', weather21, './upload/多雲時晴.svg');
+                    } else if (weather21 == "陰天") {
+                        setBackgroundImage('box21', weather21, './upload/陰天.svg');
                     }
                     if (weather22 == "晴時多雲") {
-                        var box1 = document.getElementById('box22'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/晴時多雲.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                        setBackgroundImage('box22', weather22, './upload/晴時多雲.svg');
                     } else if (weather22 == "陰時多雲") {
-                        var box1 = document.getElementById('box22'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/陰時多雲.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat";
+                        setBackgroundImage('box22', weather22, './upload/陰時多雲.svg');
+                    } else if (weather22 == "陰短暫雨") {
+                        setBackgroundImage('box22', weather22, './upload/陰短暫雨.svg');
                     }
 
 
@@ -296,7 +282,12 @@ include "db.php";
             <div class="number">進站總人數 :
                 <?=$Total->find(1)['total'];?></div>
             <footer>
-                <?=$Bottom->find(1)['bottom'];?>
+                <?=$Bottom->find(1)['bottom'];?><a href="https://github.com/user638726"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style=width:30px;height:30px;>
+                        <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg></a>
             </footer>
         </div>
     </div>
