@@ -161,6 +161,17 @@ include "db.php";
                     var el = document.getElementById("box22");
                     el.insertAdjacentHTML("beforeEnd", "<p>天氣:" + weather22 + "</p>");
 
+                    function setBackgroundImage(boxId, weather, imageUrl) {
+                        var box = document.getElementById(boxId); // 获取对应的 box 元素
+                        // 只有当背景图片为空时才设置背景
+                        if (!box.style.backgroundImage) {
+                            box.style.backgroundImage = "url('" + imageUrl + "')";
+                            box.style.backgroundSize = "100px";
+                            box.style.backgroundPosition = "bottom";
+                            box.style.backgroundRepeat = "no-repeat";
+                        }
+                    }
+
                     if (weather19 == "陰天") {
                         var box1 = document.getElementById('box19'); // 获取box1元素
                         box1.style.backgroundImage = "url('./upload/陰天.svg')"; // 设置背景图像
@@ -168,18 +179,12 @@ include "db.php";
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
                     }
-                    if (weather20 == "陰時多雲") {
-                        var box1 = document.getElementById('box20'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/陰時多雲.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
-                    }else if(weather20 == "多雲"){
-                        var box1 = document.getElementById('box20'); // 获取box1元素
-                        box1.style.backgroundImage = "url('./upload/多雲.svg')"; // 设置背景图像
-                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
-                        box1.style.backgroundPosition = "bottom"; // 背景居中
-                        box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    if (weather20 == "多雲時陰") {
+                        setBackgroundImage('box20', weather20, './upload/多雲時陰.svg');
+                    } else if (weather20 == "陰時多雲") {
+                        setBackgroundImage('box20', weather20, './upload/陰時多雲.svg');
+                    } else if (weather20 == "多雲時晴") {
+                        setBackgroundImage('box20', weather20, './upload/多雲時晴.svg');
                     }
                     if (weather21 == "晴時多雲") {
                         var box1 = document.getElementById('box21'); // 获取box1元素
@@ -187,6 +192,12 @@ include "db.php";
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    } else if (weather21 == "多雲時晴") {
+                        var box1 = document.getElementById('box21'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/多雲時晴.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat";
                     }
                     if (weather22 == "晴時多雲") {
                         var box1 = document.getElementById('box22'); // 获取box1元素
@@ -194,6 +205,12 @@ include "db.php";
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    } else if (weather22 == "陰時多雲") {
+                        var box1 = document.getElementById('box22'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/陰時多雲.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat";
                     }
 
 

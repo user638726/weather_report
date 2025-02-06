@@ -189,7 +189,7 @@ include "db.php";
                             box.style.backgroundRepeat = "no-repeat";
                         }
                     }
-                    
+
                     if (weather10 == "多雲") {
                         var box1 = document.getElementById('box10'); // 获取box1元素
                         box1.style.backgroundImage = "url('./upload/多雲.svg')"; // 设置背景图像
@@ -203,6 +203,12 @@ include "db.php";
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    } else if (weather11 == "多雲時晴") {
+                        var box1 = document.getElementById('box11'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/多雲時晴.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat";
                     }
                     if (weather12 == "多雲") {
                         var box1 = document.getElementById('box12'); // 获取box1元素
@@ -224,6 +230,12 @@ include "db.php";
                         box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
                         box1.style.backgroundPosition = "bottom"; // 背景居中
                         box1.style.backgroundRepeat = "no-repeat"; // 不重复背景图
+                    } else if (weather14 == "多雲時晴") {
+                        var box1 = document.getElementById('box14'); // 获取box1元素
+                        box1.style.backgroundImage = "url('./upload/多雲時晴.svg')"; // 设置背景图像
+                        box1.style.backgroundSize = "100px"; // 确保背景图覆盖整个元素
+                        box1.style.backgroundPosition = "bottom"; // 背景居中
+                        box1.style.backgroundRepeat = "no-repeat";
                     }
                     if (weather15 == "多雲") {
                         var box1 = document.getElementById('box15'); // 获取box1元素
@@ -234,8 +246,10 @@ include "db.php";
                     }
                     if (weather16 == "多雲時陰") {
                         setBackgroundImage('box16', weather16, './upload/多雲時陰.svg');
-                    }else if(weather16 == "陰時多雲"){
+                    } else if (weather16 == "陰時多雲") {
                         setBackgroundImage('box16', weather16, './upload/陰時多雲.svg');
+                    } else if (weather16 == "多雲") {
+                        setBackgroundImage('box16', weather16, './upload/多雲.svg');
                     }
                     if (weather17 == "陰短暫雨") {
                         var box1 = document.getElementById('box17'); // 获取box1元素
