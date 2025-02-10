@@ -239,7 +239,11 @@ include "db.php";
                         setBackgroundImage('box4', weather4, './upload/多雲時陰.svg');
                     } else if (weather4 == "陰時多雲") {
                         setBackgroundImage('box4', weather4, './upload/陰時多雲.svg');
+<<<<<<< HEAD
                     } else if (weather4 == "晴時多雲") {
+=======
+                    }else if(weather4 == "晴時多雲"){
+>>>>>>> 205a79cc7a89748b54a681921973d3fdd8cb3195
                         setBackgroundImage('box4', weather4, './upload/晴時多雲.svg');
                     }
                     if (weather5 == "多雲") {
@@ -248,8 +252,13 @@ include "db.php";
                         setBackgroundImage('box5', weather5, './upload/多雲時晴.svg');
                     } else if (weather5 == "陰天") {
                         setBackgroundImage('box5', weather5, './upload/陰天.svg');
+<<<<<<< HEAD
                     } else if (weather5 == "晴時多雲") {
                         setBackgroundImage('box5', weather5, './upload/晴時多雲.svg');
+=======
+                    }else if(weather5 == "多雲時陰"){
+                        setBackgroundImage('box5', weather5, './upload/多雲時陰.svg');
+>>>>>>> 205a79cc7a89748b54a681921973d3fdd8cb3195
                     }
                     if (weather6 == "多雲時陰") {
                         setBackgroundImage('box6', weather6, './upload/多雲時陰.svg');
@@ -272,8 +281,13 @@ include "db.php";
                         setBackgroundImage('box8', weather8, './upload/陰天.svg');
                     } else if (weather8 == "陰短暫雨") {
                         setBackgroundImage('box8', weather8, './upload/陰短暫雨.svg');
+<<<<<<< HEAD
                     } else if (weather8 == "晴時多雲") {
                         setBackgroundImage('box8', weather8, './upload/晴時多雲.svg');
+=======
+                    }else if(weather8 == "陰時多雲"){
+                        setBackgroundImage('box8', weather8, './upload/陰時多雲.svg');
+>>>>>>> 205a79cc7a89748b54a681921973d3fdd8cb3195
                     }
                     if (weather9 == "多雲") {
                         setBackgroundImage('box9', weather9, './upload/多雲.svg');
