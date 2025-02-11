@@ -263,6 +263,8 @@ include "db.php";
                         setBackgroundImage('box17', weather17, './upload/陰天.svg');
                     } else if (weather17 == "晴時多雲") {
                         setBackgroundImage('box17', weather17, './upload/晴時多雲.svg');
+                    } else if (weather17 == "多雲時晴") {
+                        setBackgroundImage('box17', weather17, './upload/多雲時晴.svg');
                     }
                     if (weather18 == "陰短暫雨") {
                         setBackgroundImage('box18', weather18, './upload/陰短暫雨.svg');
@@ -270,6 +272,8 @@ include "db.php";
                         setBackgroundImage('box18', weather18, './upload/陰天.svg');
                     } else if (weather18 == "多雲時晴") {
                         setBackgroundImage('box18', weather18, './upload/多雲時晴.svg');
+                    } else if (weather18 == "晴時多雲") {
+                        setBackgroundImage('box18', weather18, './upload/晴時多雲.svg');
                     }
 
 
