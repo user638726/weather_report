@@ -180,6 +180,8 @@ include "db.php";
                         setBackgroundImage('box19', weather19, './upload/多雲時陰.svg');
                     } else if (weather19 == "多雲") {
                         setBackgroundImage('box19', weather19, './upload/多雲.svg');
+                    } else if (weather19 == "陰陣雨") {
+                        setBackgroundImage('box19', weather19, './upload/陰陣雨.svg');
                     }
                     if (weather20 == "陰天") {
                         setBackgroundImage('box20', weather20, './upload/陰天.svg');
@@ -191,6 +193,8 @@ include "db.php";
                         setBackgroundImage('box20', weather20, './upload/多雲.svg');
                     } else if (weather20 == "晴時多雲") {
                         setBackgroundImage('box20', weather20, './upload/晴時多雲.svg');
+                    } else if (weather20 == "陰陣雨") {
+                        setBackgroundImage('box20', weather20, './upload/陰陣雨.svg');
                     }
                     if (weather21 == "晴時多雲") {
                         setBackgroundImage('box21', weather21, './upload/晴時多雲.svg');
@@ -200,6 +204,8 @@ include "db.php";
                         setBackgroundImage('box21', weather21, './upload/陰天.svg');
                     } else if (weather21 == "多雲") {
                         setBackgroundImage('box21', weather21, './upload/多雲.svg');
+                    } else if (weather21 == "陰短暫陣雨") {
+                        setBackgroundImage('box21', weather21, './upload/陰短暫陣雨.svg');
                     }
                     if (weather22 == "晴時多雲") {
                         setBackgroundImage('box22', weather22, './upload/晴時多雲.svg');
