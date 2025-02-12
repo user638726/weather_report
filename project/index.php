@@ -54,6 +54,7 @@
         background-color: #45a049;
     }
     </style>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
