@@ -200,6 +200,8 @@ include "db.php";
                         setBackgroundImage('box10', weather10, './upload/晴時多雲.svg');
                     } else if (weather10 == "陰陣雨") {
                         setBackgroundImage('box10', weather10, './upload/陰陣雨.svg');
+                    } else if (weather10 == "陰短暫陣雨") {
+                        setBackgroundImage('box10', weather10, './upload/陰短暫陣雨.svg');
                     }
                     if (weather11 == "多雲") {
                         setBackgroundImage('box11', weather11, './upload/多雲.svg');
