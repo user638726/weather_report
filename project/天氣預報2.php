@@ -283,6 +283,8 @@ include "db.php";
                         setBackgroundImage('box17', weather17, './upload/多雲時晴.svg');
                     } else if (weather17 == "陰陣雨") {
                         setBackgroundImage('box17', weather17, './upload/陰陣雨.svg');
+                    } else if (weather17 == "多雲") {
+                        setBackgroundImage('box17', weather17, './upload/多雲.svg');
                     }
                     if (weather18 == "陰短暫雨") {
                         setBackgroundImage('box18', weather18, './upload/陰短暫雨.svg');
