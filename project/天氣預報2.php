@@ -298,6 +298,8 @@ include "db.php";
                         setBackgroundImage('box18', weather18, './upload/陰短暫陣雨.svg');
                     } else if (weather18 == "陰陣雨") {
                         setBackgroundImage('box18', weather18, './upload/陰陣雨.svg');
+                    } else if (weather18 == "陰時多雲短暫雨") {
+                        setBackgroundImage('box18', weather18, './upload/陰時多雲短暫雨.svg');
                     }
 
 
