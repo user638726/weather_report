@@ -226,6 +226,8 @@ include "db.php";
                         setBackgroundImage('box12', weather12, './upload/晴時多雲.svg');
                     } else if (weather12 == "陰陣雨") {
                         setBackgroundImage('box12', weather12, './upload/陰陣雨.svg');
+                    } else if (weather12 == "多雲時晴") {
+                        setBackgroundImage('box12', weather12, './upload/多雲時晴.svg');
                     }
                     if (weather13 == "多雲") {
                         setBackgroundImage('box13', weather13, './upload/多雲.svg');

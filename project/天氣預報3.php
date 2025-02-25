@@ -221,6 +221,8 @@ include "db.php";
                         setBackgroundImage('box22', weather22, './upload/陰短暫雨.svg');
                     } else if (weather22 == "陰天") {
                         setBackgroundImage('box22', weather22, './upload/陰天.svg');
+                    } else if (weather22 == "多雲時陰") {
+                        setBackgroundImage('box22', weather22, './upload/多雲時陰.svg');
                     }
 
 
