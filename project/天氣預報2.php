@@ -335,6 +335,8 @@ include "db.php";
                         setBackgroundImage('box17', weather17, './upload/陰短暫陣雨或雷雨.svg');
                     }else if(weather17 == "陰短暫陣雨"){
                         setBackgroundImage('box17', weather17, './upload/陰短暫陣雨.svg'); 
+                    }else if(weather17 == "多雲時陰短暫陣雨或雷雨"){
+                        setBackgroundImage('box17', weather17, './upload/多雲時陰短暫陣雨或雷雨.svg'); 
                     }
                     if (weather18 == "陰短暫雨") {
                         setBackgroundImage('box18', weather18, './upload/陰短暫雨.svg');
@@ -354,6 +356,8 @@ include "db.php";
                         setBackgroundImage('box18', weather18, './upload/陰時多雲.svg');
                     } else if (weather18 == "陰短暫陣雨或雷雨") {
                         setBackgroundImage('box18', weather18, './upload/陰短暫陣雨或雷雨.svg');
+                    }else if(weather18 == "多雲短暫陣雨或雷雨"){
+                        setBackgroundImage('box18', weather18, './upload/多雲短暫陣雨或雷雨.svg');
                     }
 
 
