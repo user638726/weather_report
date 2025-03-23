@@ -192,6 +192,8 @@ include "db.php";
                         setBackgroundImage('box19', weather19, './upload/陰短暫陣雨或雷雨.svg');
                     }else if(weather19 == "陰短暫雨"){
                         setBackgroundImage('box19', weather19, './upload/陰短暫雨.svg');
+                    }else if(weather19 == "多雲時晴"){
+                        setBackgroundImage('box19', weather19, './upload/多雲時晴.svg');
                     }
                     if (weather20 == "陰天") {
                         setBackgroundImage('box20', weather20, './upload/陰天.svg');
