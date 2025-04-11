@@ -383,6 +383,8 @@ include "db.php";
                         setBackgroundImage('box9', weather9, './upload/陰短暫陣雨.svg');
                     } else if (weather9 == "陰短暫陣雨或雷雨") {
                         setBackgroundImage('box9', weather9, './upload/陰短暫陣雨或雷雨.svg');
+                    }else if(weather9 == "陰時多雲短暫陣雨"){
+                        setBackgroundImage('box9', weather9, './upload/陰時多雲短暫陣雨.svg');
                     }
 
 

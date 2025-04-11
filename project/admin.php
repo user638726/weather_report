@@ -77,7 +77,7 @@ if(!isset($_SESSION['login'])){
     </div>
     <div style="clear:both;"></div>
     <div
-        style="width:1300px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
+        style="width:1900px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
         <span class="t" style="line-height:123px;text-align:center;"><?=$Bottom->find(1)['bottom'];?></span>
     </div>
 
