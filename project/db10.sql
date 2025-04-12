@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025-01-12 13:17:39
+-- 產生時間： 2025-04-12 10:51:11
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -81,15 +81,15 @@ CREATE TABLE `bottom` (
 --
 
 INSERT INTO `bottom` (`id`, `bottom`) VALUES
-(1, '頁尾版權');
+(1, '頁尾版權2025連于綸');
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `image`
+-- 資料表結構 `images`
 --
 
-CREATE TABLE `image` (
+CREATE TABLE `images` (
   `id` int(10) UNSIGNED NOT NULL,
   `img` text NOT NULL,
   `text` text NOT NULL,
@@ -97,17 +97,17 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 傾印資料表的資料 `image`
+-- 傾印資料表的資料 `images`
 --
 
-INSERT INTO `image` (`id`, `img`, `text`, `sh`) VALUES
-(1, '01D01.jpg', '', 1),
-(3, '01D02.jpg', '', 1),
-(5, '01D03.jpg', '', 1),
-(6, '01D04.jpg', '', 1),
-(7, '01D05.jpg', '', 1),
-(8, '01D06.jpg', '', 1),
-(9, '01D07.jpg', '', 1);
+INSERT INTO `images` (`id`, `img`, `text`, `sh`) VALUES
+(1, 'noaa-0ETSZYPjvDo-unsplash.jpg', '', 1),
+(3, 'noaa-UJsUJr3cgEM-unsplash.jpg', '', 1),
+(5, 'noaa--urO88VoCRE-unsplash.jpg', '', 1),
+(6, 'premium_photo-1664303017917-71ebeb42343d.avif', '', 1),
+(7, 'premium_photo-1667143951629-a1b2acc1a832.avif', '', 1),
+(8, 'premium_photo-1710966587489-24a7b95ddfb7.avif', '', 1),
+(9, 'neda-astani-KWTkd7mHqKE-unsplash.jpg', '', 1);
 
 -- --------------------------------------------------------
 
@@ -220,7 +220,7 @@ CREATE TABLE `total` (
 --
 
 INSERT INTO `total` (`id`, `total`) VALUES
-(1, 12);
+(1, 18);
 
 --
 -- 已傾印資料表的索引
@@ -245,9 +245,9 @@ ALTER TABLE `bottom`
   ADD PRIMARY KEY (`id`);
 
 --
--- 資料表索引 `image`
+-- 資料表索引 `images`
 --
-ALTER TABLE `image`
+ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -303,9 +303,9 @@ ALTER TABLE `bottom`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `image`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
-ALTER TABLE `image`
+ALTER TABLE `images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
