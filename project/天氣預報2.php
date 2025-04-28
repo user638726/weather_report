@@ -321,6 +321,8 @@ include "db.php";
                         setBackgroundImage('box15', weather15, './upload/多雲時陰短暫陣雨或雷雨.svg');
                     } else if (weather15 == "陰短暫雨") {
                         setBackgroundImage('box15', weather15, './upload/陰短暫雨.svg');
+                    }else if(weather15 == "多雲短暫陣雨或雷雨"){
+                        setBackgroundImage('box15', weather15, './upload/多雲短暫陣雨或雷雨.svg');
                     }
                     if (weather16 == "多雲時陰") {
                         setBackgroundImage('box16', weather16, './upload/多雲時陰.svg');
